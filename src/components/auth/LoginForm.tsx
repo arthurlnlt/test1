@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { auth, LoginCredentials } from '../../lib/auth';
 import { Lock, User } from 'lucide-react';
 import { useAuth } from '../../lib/auth-context';
@@ -104,12 +104,12 @@ export function LoginForm() {
           </div>
 
           <div className="text-center">
-            <a
-              href="/register"
+            <Link
+              to="/register"
               className="text-primary-400 hover:text-primary-300 text-sm"
             >
               Don't have an account? Sign up
-            </a>
+            </Link>
           </div>
         </form>
       </div>
